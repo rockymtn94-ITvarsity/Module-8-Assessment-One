@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+           
+	    
+    </head>
+    <body>
+   
+    <style>
+     body {
+     background-color: lightblue;
+      }
+     </style>
+   
+
+        <h1><b>WELCOME : PLEASE LOG INTO YOUR ACCOUNT</b></h1>
+        
+
+        <form>
+            <label for="usernameInput">Username: </label><input type="text" id="usernameInput"/><br/><br/>
+            <label for="passwordInput">Password: </label><input type="password" id="passwordInput"/>
+            <p id="message"></p>
+            <br/><br/>
+            <a href="#" onclick="verifyUser()"><h1><b>LOG IN</b></h1></a>
+        </form>
+        
+        <hr>
+           <button type="button"
+           onclick="document.getElementById('demo').innerHTML = Date()">
+           Click Button TO Display Date and Time.</button>
+
+           <p id="demo"></p>
+        
+        <br/>
+        <br/>
+        <hr>
+
+        
+        <script>
+
+            function verifyUser(){
+                var username = document.getElementById("usernameInput").value;
+                var password = document.getElementById("passwordInput").value;
+
+                checkUserCreds(username, password);
+            }
+
+            function checkUserCreds(username, password){
+                var systemUsername = "Bond";
+                var systemPassword = "007";
+
+                if(username == systemUsername && password == systemPassword){
+                    document.getElementById("message").innerHTML = "Correct. logging you in...";
+                }
+                else {
+                    document.getElementById("message").innerHTML = "Username or Password are Incorrect";
+                }
+            }
+
+        </script>
+             
+    </body>
+</html>
+
+
+
+
